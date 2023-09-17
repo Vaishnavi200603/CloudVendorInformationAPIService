@@ -1,0 +1,13 @@
+package com.CloudVender.CloudvenderInformationAPiService;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CloudVendorInformation {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CloudVendorInformation.class, args);
+	}
+
+}

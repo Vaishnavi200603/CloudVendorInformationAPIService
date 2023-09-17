@@ -1,0 +1,38 @@
+package com.CloudVender.CloudvenderInformationAPiService.Controller;
+
+import com.CloudVender.CloudvenderInformationAPiService.Model.cloudVendor;
+import org.springframework.web.bind.annotation.*;
+
+//@Controller
+@RestController
+@RequestMapping("/cloudVendor")
+//@ResponseBody
+public class cloudVendorAPIController {
+
+    cloudVendor cloudvendor;
+
+    @GetMapping("{vendorId}")
+    public cloudVendor getCloudVendorDetails(String vendorId){
+        return cloudvendor;
+    }
+
+    @PostMapping
+    public String createCloudVendorDetails(@RequestBody cloudVendor cloudvendor){
+        this.cloudvendor = cloudvendor;
+        return "Cloud Vendor Created Successfully";
+    }
+
+    @PutMapping
+    public String updateCloudVendorDetails(@RequestBody cloudVendor cloudvendor){
+        this.cloudvendor = cloudvendor;
+        return "Cloud Vendor Updated Successfully";
+    }
+
+    @DeleteMapping("{vendorId}")
+    public String deleteCloudVendorDetails(String vendorId){
+        this.cloudvendor = null;
+        return "Cloud Vendor Deleted Successfully";
+    }
+
+
+}
